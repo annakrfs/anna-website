@@ -1,0 +1,47 @@
+:root{--paper:#f1efe7;--ink:#20211e;--muted:#73746d;--line:#bebeb3;--gutter:clamp(22px,4.3vw,76px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ink);color:var(--paper)}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:6px}
+p,h1,h2,figure{margin:0}
+.micro,nav,.masthead-note{font-size:12px;font-weight:400;line-height:1.5;letter-spacing:.055em;text-transform:uppercase}
+.masthead{margin:0 var(--gutter);min-height:86px;display:flex;align-items:center;border-bottom:1px solid var(--ink);gap:48px}
+.wordmark{font-size:25px;letter-spacing:-2px;font-weight:700}
+.masthead-note{flex:1}
+nav{display:flex;gap:34px}
+nav a,footer a{position:relative}
+nav a::after,footer a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s}
+nav a:hover::after,footer a:hover::after{transform:scaleX(1)}
+.intro{padding:30px var(--gutter) 54px}
+.intro-meta{display:flex;justify-content:space-between}
+.intro h1{font-family:"Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(72px,13vw,208px);font-weight:300;letter-spacing:.035em;line-height:1.1;margin:clamp(64px,7vw,112px) 0 clamp(72px,8vw,128px);font-synthesis:none}
+.intro .name-dot{letter-spacing:0}
+.intro-bottom{display:grid;grid-template-columns:1fr 1fr auto;gap:24px;align-items:end}
+.intro-statement{font-size:clamp(20px,2.2vw,34px);line-height:1.17;letter-spacing:-.04em}
+.down-link{font-size:34px;line-height:1;display:grid;place-items:center;min-width:44px;min-height:44px;transition:transform .2s}
+.down-link:hover{transform:translateY(5px)}
+.section-grid{display:grid;grid-template-columns:22% 1fr;border-top:1px solid var(--ink);margin:0 var(--gutter)}
+.section-index{padding-top:30px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:50px}
+.marginal{writing-mode:vertical-rl;transform:rotate(180deg);margin-bottom:48px;color:var(--muted)}
+.about-content{padding:68px 0 28px 30px;border-left:1px solid var(--line)}
+h2{font-size:clamp(32px,4.1vw,66px);font-weight:400;letter-spacing:-.055em;line-height:1.05}
+.muted{color:var(--muted)}
+.biography{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin:58px 0 68px;max-width:960px}
+.biography p{font-size:17px;line-height:1.65;letter-spacing:-.018em}
+.about-foot{display:flex;justify-content:space-between;gap:20px;padding-top:20px;border-top:1px solid var(--line)}
+.painting{margin-top:0}
+.painting-content{padding:66px 0 68px 30px;border-left:1px solid var(--line)}
+.painting-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:42px}
+.artwork{overflow:hidden;background:#e5e0d5}
+.artwork img{display:block;width:100%;height:auto;transition:transform .6s ease}
+.artwork:hover img{transform:scale(1.015)}
+figcaption{display:flex;justify-content:space-between;gap:24px;padding-top:18px;line-height:1.6!important}
+.caption-number{color:var(--muted)}
+footer{margin:0 var(--gutter);border-top:1px solid var(--ink);padding:25px 0 30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.skip-link{position:fixed;top:12px;left:12px;z-index:10;padding:12px 18px;background:var(--ink);color:var(--paper);transform:translateY(-180%)}
+.skip-link:focus{transform:translateY(0)}
+@media(min-width:1600px){body{max-width:1800px;margin:auto}}
+@media(max-width:760px){.masthead{min-height:72px;gap:20px}.masthead-note{display:none}nav{margin-left:auto;gap:20px}.intro{padding-top:24px;padding-bottom:40px}.intro-meta{gap:18px}.intro-meta span:last-child{text-align:right;max-width:150px}.intro h1{font-size:clamp(56px,17vw,112px);letter-spacing:.025em;margin:64px 0 76px}.intro-bottom{grid-template-columns:1fr auto}.intro-bottom>.micro{grid-column:1 / -1}.intro-statement{font-size:26px}.section-grid{grid-template-columns:1fr}.section-index{padding-top:23px}.marginal{display:none}.about-content,.painting-content{border-left:0;padding:36px 0 36px}h2{font-size:clamp(30px,6.6vw,48px)}.biography{gap:24px;margin:32px 0 36px;grid-template-columns:1fr;max-width:560px}.biography p{font-size:17px}.about-foot{font-size:11px}.painting-heading{margin-bottom:30px}.painting-heading>.micro{white-space:nowrap}footer>.micro{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
